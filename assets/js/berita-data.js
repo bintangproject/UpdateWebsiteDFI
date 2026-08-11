@@ -65,6 +65,36 @@ const newsData = {
     ]
   },
   5: {
+    title: "ORSABA 2026 Bekali Santri Baru dengan Nilai-Nilai Kepesantrenan dan Kebersamaan",
+    date: "17 Juli 2026",
+    category: "Pra Kegiatan Santri Baru",
+    cover: "https://i.ibb.co.com/m5HVpf0p/O-Cover.jpg",
+    content:
+      "<p>Pondok Pesantren Darul Fawaid Ilmiyah menyelenggarakan Orientasi Santri Baru (ORSABA) Tahun 2026 pada 13–16 Juli 2026 sebagai rangkaian penyambutan dan pembinaan awal bagi santri baru. Kegiatan ini bertujuan memperkenalkan lingkungan pesantren, sejarah berdirinya pondok, visi dan misi lembaga, serta nilai-nilai dasar yang menjadi pedoman dalam kehidupan santri. Selama pelaksanaan ORSABA, para peserta mengikuti berbagai sesi pembinaan yang dipandu oleh pengasuh, dewan struktural, dan para asatidz dalam suasana yang edukatif, interaktif, dan penuh kekeluargaan.</p>" +
+      "<p>Beragam materi diberikan untuk membentuk karakter santri sejak awal, di antaranya Sejarah, Visi, dan Misi Pondok, Trilogi Santri, Urgensi Akhlak dan Adab Santri, Urgensi Furudhul Ainiyah, Panca Jiwa Santri, serta urgensi penguasaan bahasa Arab dan bahasa Inggris dalam pendidikan pesantren. Melalui materi-materi tersebut, para santri dibekali pemahaman mengenai pentingnya keikhlasan, kesederhanaan, kemandirian, kedisiplinan, ukhuwah Islamiyah, serta semangat menuntut ilmu sebagai bekal menjalani kehidupan di pesantren.</p>" +
+      "<p>Sebagai penutup rangkaian ORSABA, seluruh santri baru mengikuti kegiatan outbound di Bermi Eco Park, Krucil. Berbagai permainan edukatif dan aktivitas kelompok dirancang untuk mempererat ukhuwah, melatih kerja sama, membangun jiwa kepemimpinan, serta menumbuhkan rasa percaya diri. Diharapkan melalui ORSABA 2026, seluruh santri baru dapat beradaptasi dengan baik, mengenal budaya pesantren, serta siap menjalani proses pendidikan dengan semangat, disiplin, dan akhlakul karimah.</p>",
+    photos: [
+      { url: "https://i.ibb.co.com/20Cqg3cB/O-1.jpg", caption: "Pembacaan Mahallul Qiyam Pada Acara Penutupan Orsaba" },
+      { url: "https://i.ibb.co.com/jZsmT4dM/O-2.jpg", caption: "Pengasuh Menyampaikan Materi Tentang Kepesantrenan" },
+      { url: "https://i.ibb.co.com/fVTqwX5L/O-3.jpg", caption: "Penyampaian Materi Pentingnya Bahasa Asing oleh Pemateri" }
+    ]
+  },
+  6: {
+    title: "ORSABA 2026 Bekali Santri Baru dengan Nilai-Nilai Kepesantrenan dan Kebersamaan",
+    date: "17 Juli 2026",
+    category: "Pra Kegiatan Santri Baru",
+    cover: "https://i.ibb.co.com/m5HVpf0p/O-Cover.jpg",
+    content:
+      "<p>Pondok Pesantren Darul Fawaid Ilmiyah menyelenggarakan Orientasi Santri Baru (ORSABA) Tahun 2026 pada 13–16 Juli 2026 sebagai rangkaian penyambutan dan pembinaan awal bagi santri baru. Kegiatan ini bertujuan memperkenalkan lingkungan pesantren, sejarah berdirinya pondok, visi dan misi lembaga, serta nilai-nilai dasar yang menjadi pedoman dalam kehidupan santri. Selama pelaksanaan ORSABA, para peserta mengikuti berbagai sesi pembinaan yang dipandu oleh pengasuh, dewan struktural, dan para asatidz dalam suasana yang edukatif, interaktif, dan penuh kekeluargaan.</p>" +
+      "<p>Beragam materi diberikan untuk membentuk karakter santri sejak awal, di antaranya Sejarah, Visi, dan Misi Pondok, Trilogi Santri, Urgensi Akhlak dan Adab Santri, Urgensi Furudhul Ainiyah, Panca Jiwa Santri, serta urgensi penguasaan bahasa Arab dan bahasa Inggris dalam pendidikan pesantren. Melalui materi-materi tersebut, para santri dibekali pemahaman mengenai pentingnya keikhlasan, kesederhanaan, kemandirian, kedisiplinan, ukhuwah Islamiyah, serta semangat menuntut ilmu sebagai bekal menjalani kehidupan di pesantren.</p>" +
+      "<p>Sebagai penutup rangkaian ORSABA, seluruh santri baru mengikuti kegiatan outbound di Bermi Eco Park, Krucil. Berbagai permainan edukatif dan aktivitas kelompok dirancang untuk mempererat ukhuwah, melatih kerja sama, membangun jiwa kepemimpinan, serta menumbuhkan rasa percaya diri. Diharapkan melalui ORSABA 2026, seluruh santri baru dapat beradaptasi dengan baik, mengenal budaya pesantren, serta siap menjalani proses pendidikan dengan semangat, disiplin, dan akhlakul karimah.</p>",
+    photos: [
+      { url: "https://i.ibb.co.com/20Cqg3cB/O-1.jpg", caption: "Pembacaan Mahallul Qiyam Pada Acara Penutupan Orsaba" },
+      { url: "https://i.ibb.co.com/jZsmT4dM/O-2.jpg", caption: "Pengasuh Menyampaikan Materi Tentang Kepesantrenan" },
+      { url: "https://i.ibb.co.com/fVTqwX5L/O-3.jpg", caption: "Penyampaian Materi Pentingnya Bahasa Asing oleh Pemateri" }
+    ]
+  },
+  7: {
     title: "Pondok Pesantren dan SMP Darul Fawaid Ilmiyah Gelar Rapat Kerja Awal Tahun Pelajaran 2026/2027",
     date: "18 Juli 2026",
     category: "Raker Tahun Ajaran Baru",
@@ -82,4 +112,4 @@ const newsData = {
 };
 
 // Urutan tampil di beranda: terbaru dulu (ubah urutan array ini jika perlu)
-const newsOrder = [1, 2, 3, 4, 5];
+const newsOrder = [1, 2, 3, 4, 5, 6, 7];
