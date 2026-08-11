@@ -7,13 +7,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const navBackdrop = document.getElementById('navBackdrop');
 
   const onScrollNav = () => {
-    if (window.scrollY > 40) navbar.classList.add('scrolled');
+    if (window.scrollY > 50) navbar.classList.add('scrolled');
     else navbar.classList.remove('scrolled');
   };
   window.addEventListener('scroll', onScrollNav);
   onScrollNav();
 
-  const closeDrawer = () => { navLinksEl.classList.remove('open'); navBackdrop.classList.remove('open'); };
+  const closeDrawer = () => { 
+    navLinksEl.classList.remove('open'); 
+    navBackdrop.classList.remove('open'); 
+  };
   if (navToggle) {
     navToggle.addEventListener('click', () => {
       navLinksEl.classList.toggle('open');
@@ -31,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const target = document.querySelector(id);
       if (target) {
         e.preventDefault();
-        const top = target.getBoundingClientRect().top + window.scrollY - 70;
+        const top = target.getBoundingClientRect().top + window.scrollY - 80;
         window.scrollTo({ top, behavior: 'smooth' });
       }
     });
@@ -46,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         obs.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
   revealEls.forEach(el => revealObserver.observe(el));
 
   /* ---------- 4. ACTIVE NAV LINK ON SCROLL ---------- */
@@ -54,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinkItems = document.querySelectorAll('.nav-links a');
   const setActiveLink = () => {
     let current = '';
-    const pos = window.scrollY + 120;
+    const pos = window.scrollY + 150;
     sections.forEach(sec => {
       if (pos >= sec.offsetTop && pos < sec.offsetTop + sec.offsetHeight) current = sec.id;
     });
@@ -90,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const toTopBtn = document.getElementById('toTop');
   if (toTopBtn) {
     window.addEventListener('scroll', () => {
-      toTopBtn.classList.toggle('show', window.scrollY > 500);
+      toTopBtn.classList.toggle('show', window.scrollY > 600);
     });
     toTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   }
@@ -104,12 +107,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const first = newsData[firstId];
     if (first) {
       newsHeroSlot.innerHTML = `
-        <a href="berita.html?id=${firstId}" class="card news-hero" style="display:block">
+        <a href="berita.html?id=${firstId}" class="card news-hero">
           <img src="${first.cover}" alt="${first.title}">
           <div class="news-hero-body">
             <span class="news-badge">${first.category}</span>
             <h4>${first.title}</h4>
-            <p style="color:var(--ink-soft); font-size:.85rem;"><i class="bi bi-arrow-right me-1"></i> Baca selengkapnya</p>
+            <p style="color:var(--ink-soft); font-size:.9rem;"><i class="bi bi-arrow-right me-2"></i> Baca selengkapnya</p>
           </div>
         </a>`;
     }
@@ -118,18 +121,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const n = newsData[id];
         if (!n) return '';
         return `
-          <a href="berita.html?id=${id}" class="news-list-item" style="text-decoration:none;">
+          <a href="berita.html?id=${id}" class="news-list-item">
             <img src="${n.cover}" alt="${n.title}">
             <div class="news-list-body">
               <h6>${n.title}</h6>
-              <span class="date"><i class="bi bi-calendar3 me-1"></i>${n.date}</span>
+              <span class="date"><i class="bi bi-calendar3 me-2"></i>${n.date}</span>
             </div>
           </a>`;
       }).join('');
     }
   }
 
-  /* ---------- 8. TESTIMONI (disimpan lokal di perangkat pengunjung) ---------- */
+  /* ---------- 8. TESTIMONI (Lokal di perangkat) ---------- */
   const formTestimoni = document.getElementById('formTestimoni');
   const wadahTestimoni = document.getElementById('wadahTestimoni');
   const btnSubmit = document.getElementById('btnSubmitTestimoni');
@@ -164,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <span class="testi-time"><i class="bi bi-clock-history me-1"></i>${escapeHtml(item.waktu)}</span>
         <p class="testi-text">&ldquo;${escapeHtml(item.komentar)}&rdquo;</p>
       </div>
-    `).join('') + `<p class="testi-note"><i class="bi bi-info-circle"></i> Komentar saat ini tersimpan di perangkat masing-masing pengunjung. Hubungi pengelola web untuk mengaktifkan buku tamu bersama (server).</p>`;
+    `).join('') + `<p class="testi-note"><i class="bi bi-info-circle" style="font-size: 1.2rem;"></i> Komentar saat ini tersimpan di perangkat masing-masing pengunjung. Hubungi pengelola web untuk mengaktifkan buku tamu bersama (server).</p>`;
   }
 
   if (wadahTestimoni) renderTestimoni(ambilTestimoniLokal());
@@ -177,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!nama || !isi) return;
 
       const btnOriginal = btnSubmit.innerHTML;
-      btnSubmit.innerHTML = '<i class="bi bi-arrow-repeat me-2"></i>Mengirim...';
+      btnSubmit.innerHTML = '<i class="bi bi-arrow-repeat me-2" style="animation: spin 1s linear infinite;"></i>Mengirim...';
       btnSubmit.disabled = true;
 
       setTimeout(() => {
@@ -191,8 +194,8 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
           btnSubmit.innerHTML = btnOriginal;
           btnSubmit.disabled = false;
-        }, 2200);
-      }, 450);
+        }, 2500);
+      }, 600);
     });
   }
 });
